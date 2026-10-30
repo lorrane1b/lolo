@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Efeito Doppler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Efeito Doppler</h1>
+        <p>Calculadora de frequência percebida pelo observador</p>
+
+        <form id="dopplerForm">
+
+            <label for="observador">
+                Velocidade do observador (m/s):
+            </label>
+            <input type="number" id="observador"
+                   min="0" step="any" value="0" required>
+
+            <label for="direcaoObservador">
+                Movimento do observador:
+            </label>
+            <select id="direcaoObservador">
+                <option value="aproximando">Aproximando-se</option>
+                <option value="afastando">Afastando-se</option>
+            </select>
+
+            <label for="fonte">
+                Velocidade da fonte (m/s):
+            </label>
+            <input type="number" id="fonte"
+                   min="0" step="any" value="0" required>
+
+            <label for="direcaoFonte">
+                Movimento da fonte:
+            </label>
+            <select id="direcaoFonte">
+                <option value="aproximando">Aproximando-se</option>
+                <option value="afastando">Afastando-se</option>
+            </select>
+
+            <label for="som">
+                Velocidade do som (m/s):
+            </label>
+            <input type="number" id="som"
+                   min="0.01" step="any" value="343" required>
+
+            <label for="frequencia">
+                Frequência da fonte (Hz):
+            </label>
+            <input type="number" id="frequencia"
+                   min="0.01" step="any" required>
+
+            <button type="submit">Calcular frequência</button>
+
+        </form>
+
+        <div id="resultado" class="resultado">
+            A frequência percebida aparecerá aqui.
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
